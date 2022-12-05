@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    
+    --bg-color: #ebdfcc;
+    --color-one: #02031a;
+    --color-two: #021b2b;
+    --color-three: #e0bb34;
+    --color-four: #fccd23;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: fit-content;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: .5rem;
+    width: 10rem;
+    height: 10rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: all .1s;
+    border-radius: 4px;
+}
+
+.key:hover {
+    color: var(--color-three);
+}
+
+.key:nth-child(odd) {
+    background-color: var(--color-one);
+}
+
+.key:nth-child(even) {
+    background-color: var(--color-two);
+}
+
+.key kbd {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.active {
+    transform: scale(1.1);
+    color: var(--color-four);
+    box-shadow: 2px 2px 2px var(--color-four);
+}
+
+@media screen and (max-width: 379px) {
+    .key {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .key kbd {
+        font-size: 2rem;
+    }
+
+    .key p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 289px) {
+    .key {
+        width: 5rem;
+        height: 5rem;
+    }
+}
