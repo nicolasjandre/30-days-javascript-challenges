@@ -15,6 +15,13 @@ body {
   background-color: var(--bg-color);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   color: var(--text-color);
   text-align: center;
@@ -27,8 +34,10 @@ h1 {
   width: 100%;
   height: 50vh;
   max-height: 600px;
-  padding: 2rem;
+  padding: 0 2rem;
   overflow: hidden;
+  max-width: 70%;
+  
 }
 
 .panel {
@@ -38,10 +47,35 @@ h1 {
   justify-content: center;
   flex-direction: column;
   background: black;
-  background-size: cover;
+  background-size: fill;
   background-position: center;
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  transition: .9s;
+}
+
+.panel.open {
+  flex: 5;
+}
+
+.panel.open-active p:first-child, .panel.open-active p:last-child {
+  transform: translateY(0);
+}
+
+.panel.open p:first-child, .panel.open p:last-child {
+  font-size: 2rem;
+}
+
+.panel.open p:nth-child(2) {
+  font-size: 5rem;
+}
+
+.panel > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1 0 auto;
 }
 
 .panel p {
@@ -49,8 +83,20 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 
-.panel p:first-child, .panel p:last-child{
-  font-size: 2rem;
+.panel p:first-child {
+  font-size: 0rem;
+  transform: translateY(-100%);
+  transition: all cubic-bezier(0.37, 1.63, 0.62, 1.06) 1s;
+}
+
+.panel p:nth-child(2) {
+  transition: .5s;
+}
+
+.panel p:last-child {
+  font-size: 0rem;
+  transform: translateY(100%);
+  transition: all cubic-bezier(0.37, 1.63, 0.62, 1.06) 1s;
 }
 
 .panel1 {
@@ -66,7 +112,7 @@ h1 {
   background-image: url(https://source.unsplash.com/random/?Wolf/);
 }
 .panel5 {
-  background-image: url(https://source.unsplash.com/random/?Panther/);
+  background-image: url(https://source.unsplash.com/random/?Tiger/);
 }
 
 .back {
@@ -85,4 +131,10 @@ h1 {
 
 .back img:hover {
   transform: rotate(-360deg);
+}
+
+@media screen and (max-width: 1400px) {
+  .panels {
+    max-width: 1000px;
+  }
 }
