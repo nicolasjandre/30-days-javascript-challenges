@@ -1,0 +1,24 @@
+body {
+    background-color: #f6c7b7;
+}
+p {
+    text-align: center;
+}
+
+.back {
+    position: absolute;
+    right: 3rem;
+    bottom: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+.back img {
+    cursor: pointer;
+    width: 8rem;
+    transition: .8s;
+}
+
+.back img:hover {
+    transform: rotate(-360deg);
+}
