@@ -7,15 +7,21 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="./js/index.js" defer></script>
+
     <title>Challenge #3 - CSS Variables</title>
 </head>
 <body>
     <main>
         <h1>CSS <em>Variables</em> with <span>JS</span></h1>
         <div class="inputs">
-            <label min="0" max="25" data-sizing="px" for="blur-input">Blur:</label><input type="range" name="blur-input">
-            <label min="0" max="25" data-sizing="px" for="spacing-input">Spacing:</label><input type="range" name="spacing-input">
-            <label for="color-input">Base Color: </label><input type="color" name="Color" id="color-input">
+            <label for="blur-input">Blur:</label><input type="range" name="blur-input" data-sizing="px" min="0" max="25">
+            <label for="spacing-input">Spacing:</label><input type="range" name="spacing-input" data-sizing="px" min="0" max="25">
+            <label for="color-input">Base Color: </label><input type="color" name="color-input" value="#fbff00">
         </div>
         <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80" alt="Picture of a nice blue car" class="img">
     </main>
