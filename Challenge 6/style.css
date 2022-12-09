@@ -12,9 +12,10 @@
 }
 
 body {
+    position: relative;
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--bg-color);
 }
 
@@ -70,6 +71,11 @@ input:focus {
     transform: perspective(100px) rotateX(-3deg) translateY(3px);
     background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
 }
+
+.suggestions li:last-child {
+    margin-bottom: 10rem;
+}
+
 span {
     text-transform: capitalize;
 }
@@ -90,11 +96,16 @@ span.mark {
     cursor: pointer;
     width: 8rem;
     transition: .8s;
-    filter: invert(1);
 }
   
 .back img:hover {
     transform: rotate(-360deg);
+}
+
+@media screen and (max-height: 750px) {
+    .back {
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width: 420px) {

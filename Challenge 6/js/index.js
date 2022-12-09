@@ -23,13 +23,18 @@ function displayMatches() {
         } 
         return 1
     })
+
+    if (sortedMatches.length === 0) {
+        suggestions.innerHTML = '<li>Nenhuma cidade encontrada</li>'
+        return
+    }
     
     if (this.value.length === 0) {
         suggestions.innerHTML = '<li>Digite a cidade</li> <li>Ou o Estado</li>'
         return
     }
 
-    while (sortedMatches.length > 15) {
+    while (sortedMatches.length > 10) {
         sortedMatches.pop()
     }
     
