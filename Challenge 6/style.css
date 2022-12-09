@@ -58,7 +58,7 @@ input:focus {
     text-align: center;
     border-bottom: 1px solid #D8D8D8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-    padding: 20px;
+    padding: 25px;
 }
 
 .suggestions li:nth-child(odd) {
@@ -95,4 +95,28 @@ span.mark {
   
 .back img:hover {
     transform: rotate(-360deg);
+}
+
+@media screen and (max-width: 420px) {
+    input {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    li, ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        max-width: 90%;
+    }
+
+    input {
+        font-size: 4.8vw;
+    }
+
+    .suggestions li {
+        font-size: 3.8vw;
+    }
 }
